@@ -1,0 +1,23 @@
+<h3>Formulário de Ações</h3>
+
+<label for="_id">Id:</label>
+<input [(ngModel)]="acao._id" id="_id">
+<br />
+
+<label for="nome">Nome da Empresa:</label>
+<input [(ngModel)]="acao.nome" id="nome">
+<br />
+
+<label for="setorid">Setor:</label>
+<input [(ngModel)]="acao.setorid" id="setorid">
+<br />
+
+<label for="codigo">Codigo:</label>
+<input type="number" [(ngModel)]="acao.codigo" id="codigo">
+<br />
+
+
+<button (click)="cadastrar()">Cadastrar</button>
+<button (click)="cancelar()">Cancelar</button>
+
+<br />

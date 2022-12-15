@@ -1,0 +1,18 @@
+<h3>Tabela de Ações</h3>
+<label>Pesquisar</label>
+<input type="text" [(ngModel)]="empresapesquisada">
+<table *ngIf="lista.length > 0">
+    <tr>
+        <th>ID</th>
+        <th>NOME</th>
+        <th>CODIGO</th>
+        <th>CATEGORIA</th>
+    </tr>
+    <tr *ngFor="let prod of lista | filtro:empresapesquisada">
+        <th>{{prod._id}}</th>
+        <th>{{prod.nome}}</th>
+        <th>{{prod.codigo}}</th>
+        <th>{{prod.setorid}</th>
+    </tr>
+</table>
+<p *ngIf="lista.length <= 0"> NÃO HÁ AÇOES CADASTRADAS </p>
